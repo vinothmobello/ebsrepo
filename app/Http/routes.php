@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/employees', function () {
+    $employees = App\TestEmployee::all();
+    return view('employees',compact('employees'));
+});
