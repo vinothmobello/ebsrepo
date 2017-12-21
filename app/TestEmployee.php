@@ -10,6 +10,7 @@ class TestEmployee extends Model
      *
      * @var array
      */
+    protected $table="test_employee";
     protected $fillable = [
         'email', 'password',
     ];
