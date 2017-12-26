@@ -19,3 +19,11 @@ Route::get('/employees', function () {
     $employees = App\TestEmployee::all();
     return view('employees',compact('employees'));
 });
+
+Route::get('/tables', function () {
+    $tables = DB::select('SHOW TABLES');
+    foreach($tables as $table)
+    {
+          echo $table->Tables_in_db_name;
+    }
+});
