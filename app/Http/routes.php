@@ -22,8 +22,5 @@ Route::get('/employees', function () {
 
 Route::get('/tables', function () {
     $tables = DB::select('SHOW TABLES');
-    foreach($tables as $table)
-    {
-          echo $table->Tables_in_db_name;
-    }
+    return $tables;
 });
